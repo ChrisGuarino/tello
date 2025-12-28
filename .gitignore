@@ -1,4 +1,6 @@
 __pycache__/
 *.pyc
-pytorch_venv/
+tello_venv/
 .env
+model/
+.DS_Store
