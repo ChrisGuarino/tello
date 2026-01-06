@@ -4,7 +4,7 @@ import cv2
 import time
 
 # Load a COCO-pretrained YOLOv8n model
-model = YOLO("yolov8n.pt")
+model = YOLO("model/yolov8n.pt")
 
 tello = Tello()
 tello.connect()
