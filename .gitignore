@@ -1,6 +1,6 @@
 __pycache__/
 *.pyc
 tello_venv/
-.env
+.venv
 model/
 .DS_Store
