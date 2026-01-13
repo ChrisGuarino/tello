@@ -1,6 +1,5 @@
 __pycache__/
 *.pyc
-tello_venv/
 .venv
 model/
 .DS_Store

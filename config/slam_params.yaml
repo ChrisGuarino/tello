@@ -1,0 +1,45 @@
+# SLAM Configuration Parameters
+# Tunable settings for the Tello Visual SLAM system
+
+# Camera settings (derived from Tello specs)
+camera:
+  width: 640
+  height: 480
+  fov_horizontal: 82.6  # degrees
+
+# Feature detection
+features:
+  detector: 'ORB'        # 'ORB', 'SIFT', or 'AKAZE'
+  max_features: 500      # Maximum features per frame
+  scale_factor: 1.2      # ORB pyramid scale factor
+  n_levels: 8            # Number of pyramid levels
+
+# Feature tracking
+tracking:
+  window_size: 21        # Lucas-Kanade window size
+  max_level: 3           # Pyramid levels for optical flow
+  min_tracked_points: 50 # Re-detect features below this
+
+# Motion estimation
+motion:
+  ransac_threshold: 1.0  # RANSAC reprojection threshold (pixels)
+  ransac_prob: 0.999     # RANSAC confidence
+  min_inliers: 8         # Minimum inliers for valid motion
+
+# Keyframe selection
+keyframe:
+  interval: 10           # Frames between keyframes
+  min_parallax: 1.0      # Minimum parallax angle (degrees)
+
+# Mapping
+mapping:
+  max_reprojection_error: 2.0  # Pixels
+  min_observations: 2          # Minimum observations to keep point
+
+# Visualization
+visualization:
+  enable_2d: true
+  enable_3d: true
+  point_size: 2.0
+  window_width: 800
+  window_height: 600
